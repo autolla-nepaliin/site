@@ -5,6 +5,44 @@ date: "2012-06-28"
 type: "page"
 ---
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Movie",
+  "name": "Autolla Nepaliin - Unelmien elokuva",
+  "alternateName": "Driving to Nepal - The Dream Movie",
+  "description": "In 2012, five Finnish friends drove over 20,000 kilometers from Finland to Nepal in a 1989 Volkswagen Transporter. Their journey became Finland's first 100% crowdfunded documentary film.",
+  "datePublished": "2014",
+  "duration": "PT1H36M",
+  "inLanguage": "fi",
+  "subtitleLanguage": "en",
+  "genre": ["Documentary", "Adventure"],
+  "countryOfOrigin": {
+    "@type": "Country",
+    "name": "Finland"
+  },
+  "image": "https://pub-e1f2ac35c79943dbb0fdba5cf836dbac.r2.dev/autollanepaliin-poster.jpg",
+  "sameAs": "https://www.imdb.com/title/tt4103474/",
+  "potentialAction": {
+    "@type": "WatchAction",
+    "target": {
+      "@type": "EntryPoint",
+      "urlTemplate": "https://autollanepaliin.fi/in-english/",
+      "actionPlatform": [
+        "http://schema.org/DesktopWebPlatform",
+        "http://schema.org/MobileWebPlatform"
+      ]
+    },
+    "expectsAcceptanceOf": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "EUR",
+      "availability": "https://schema.org/InStock"
+    }
+  }
+}
+</script>
+
 ## Driving to Nepal - The Dream Movie
 
 **In 2012, five Finnish friends drove over 20,000 kilometers from Finland to Nepal in a 1989 Volkswagen Transporter nicknamed "Heffalump" (Möhköfantti). Their journey became Finland's first 100% crowdfunded documentary film.**
