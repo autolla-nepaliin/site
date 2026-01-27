@@ -1,0 +1,14 @@
+{
+  "name": "autollanepaliin-static",
+  "version": "1.0.0",
+  "description": "Static archive of autollanepaliin.fi",
+  "scripts": {
+    "build": "python3 generate_html.py",
+    "extract": "python3 extract_posts.py && python3 build_static_site.py",
+    "deploy": "npx wrangler pages deploy dist --project-name=autollanepaliin",
+    "preview": "npx serve dist"
+  },
+  "keywords": ["autollanepaliin", "nepal", "documentary"],
+  "author": "Autolla Nepaliin team",
+  "license": "MIT"
+}

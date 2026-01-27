@@ -1,0 +1,20 @@
+---
+title: "Nepalista päivät 32., 33. & 34. - Aikataulut tiukkenevat ja päivät paukkuvat!"
+slug: "takaisin-29-30-aikataulut-paukkuvat"
+date: "2012-10-14"
+type: "post"
+categories:
+  - "Valokuva"
+  - "Teksti"
+  - "#päivä"
+language: "fi"
+featured_image: "/assets/uploads/DSC_9389.webp"
+---
+
+**Lauantai** Heräsimme lauantaihin innostuneina! Pakkasimme tavaramme ja siivosimme vähän huoneesta pahimpia roskia kasaan. Olimme valmiita lähtemään heti kun puhelu tulisi, sillä odottelu oli alkanut jo kyllästyttämään. Bandar Abbas ei ole mikään metropoli, itse asiassa päinvastoin. Kaikki opaskirjat kehottavat välttämään Bandar Abbasia, siellä kun ei ole muuhun Iraniin verrattuna oikeastaan palveluja eikä nähtävää. Odottaminen Bandar Abbasissa ei ollut kovin tyyristä, kolmen hengen hotelliyö oli 25€ ja ruokiin meni noin 3€ henkeä kohti päivässä. Kuitenkin koti-ikävä painoi, eikä sitä auttanut yhtään se, että kaikki normaalit kommunikointikanavat (Facebook, Skype yms.) Suomeen oli blokattu Iranissa. 
+![Keskipäivän paahteessa kadut ovat normaaliakin tyhjemmät.](/assets/uploads/DSC_9389.webp)
+*Keskipäivän paahteessa kadut ovat normaaliakin tyhjemmät.*
+ **Puhelu** Puhelin soi ja innoissani otin sen Misan ojentaessa sitä minulle. Hotellihuoneessamme alkoi jo olla aika tunkkainen miestuoksu ja seinät kaatuivat päälle, onneksi siis puhelimen toisesta päästä tilanne voitaisiin pian ratkaista. ![DSC_9418](/assets/uploads/DSC_94181.webp) Mutta eipä ratkaistu. Puhelimen päässä kuljetusagenttimme totesi laivan purkamisen olevan edelleen kesken, joten saisimme kontin ulos vasta sunnuntaiksi. Samalla ilmeni, ettei alkuperäinen Bill of Landing ollut saapunut paperikopiona Intiasta vielä, ja sen takia minun pitäisi mennä selvittelemään asiaa satamaan sunnuntaiaamuna. ![DSC_9470](/assets/uploads/DSC_9470.webp)   **Rysäys** Puhelu ei toiminut sellaisena fiilisten kohottajana kuin olimme odottaneet. Vetäydyin sängylleni ja huomasin olevani kuumeinen ja nuhainen. Dubaissa ottamani Giardia-loisen tappopaukku oli luonnollisesti samalla tuhonnut oman bakteerikantani, ja samalla heikentänyt vastustuskykyäni. Siihen kun lisäsi kylmän ja kuuman vaihtelut Dubaissa ja kylmän yön lautalla, oli diagnoosini kuumissa maissa yleinen tauti: AC flue! Tämä ilmastointilentsu on siis ihan normaali vilustuminen, joka ei vaan johdu märistä sukista pakkasella, vaan kuumien maiden jääkylmien ilmastointien pöhinöistä. Päivän innostuksessa en ollut huomannut alkavia oireita. Oloni huononi iltaa kohden, ja lisäoireeksi tulivat kipeät lihakset. Kun uni pikkuhiljaa saavutti minut, mietin kuinka hyvin jaksaisin edustaa satamassa seuraavana päivänä.   **Sunnuntai** Minun oli määrä lähteä heti aamusta kohti tullitaloa selvittämään papereita, mutta vointini ei antanut millään periksi. Yritin tsempata itseäni, koska en halunnut pienten vaivojen myöhästyttävän kotiinpääsyäni hetkeäkään. Misa ja Heikki kuitenkin olivat jo hyvää tahtia kävelemässä ulos ovesta, ja päätinkin vain antaa heille passini, autonavaimet ja muut paperit. ![DSC_9454](/assets/uploads/DSC_9454.webp) Hetken kuluttua he tulivat hakemaan minut hotellin aulaan. Siellä odotti Perse Shipping Ltd:n (ja tämä ei ole vitsi, vaan oikeasti meidän agenttuurin nimi) Bandar Abbasin edustaja. Hetken selvittelimme tilannetta, kuulemma oli ihan ok, että jäisin huoneeseen lepäämään. Edustaja koittaisi saada noutopaperit laivayhtiön konttorista ja kontin purkualueelle ilman minua. Jäimme kaikki hotellille odottamaan puhelua. Tämä puhelu alkoi olemaan jo vähän turhankin kriittinen meille. Jos saisimme auton sunnuntai-iltana tai maanantaiaamuna, meillä olisi vielä mahdollisuus ehtiä rajalle asti valoisalla ajaen. Mikäli saisimmekin auton vasta maanantai-illalla tai tiistaiaamuna, joutuisimme ajamaan tauotta vuoroissa rajalle saakka. 
+![Kohtalokas puhelu !](/assets/uploads/DSC_9463.webp)
+*Kohtalokas puhelu !*
+ Minulla ja Misalla oli vain transit-viisumit, joihin ei saanut jatkoa haettua minkään saamamme tiedon mukaan. Vaikka iranilaiset ihmiset olivat kaikki olleet ystävällisimpiä ihmisiä reissullamme, maan virkavallan kanssa emme halunneet joutua ongelmiin.   Puhelun tulokset ensi kerralla! :)

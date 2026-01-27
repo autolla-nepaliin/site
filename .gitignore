@@ -1,0 +1,23 @@
+# Dependencies
+node_modules/
+
+# Build artifacts
+*.pyc
+__pycache__/
+
+# Extracted WordPress backup - large files
+autollanepaliin-fi-*/
+
+# Temporary files
+*.tmp
+.DS_Store
+
+# Keep the important generated files
+# dist/ - this is the deploy folder
+# content/ - this is the markdown source
+
+.playwright-mcp/
+*dist/
+
+# Cloudflare deployments
+.wrangler

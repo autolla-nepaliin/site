@@ -1,0 +1,16 @@
+---
+title: "Kathmandu - Full of Surprises, part 2 - Ncell & Media Circus!"
+slug: "kathmandu-full-of-surprises-part-2"
+date: "2012-09-10"
+type: "post"
+language: "en"
+featured_image: "/assets/uploads/DSC_5821.webp"
+---
+
+![DSC_5821](/assets/uploads/DSC_5821.webp) **More Surprises** Since the week had already been quite eventful I hadn't bargained for more surprises. Nevertheless, there was more in store for us. Ncell is Nepal's biggest telecommunication operator, whose subscriber base is equivalent to that of the four biggest operators in Finland combined. Ncell had taken notice of our trip and its goals and therefore wanted to take part in our dream of a better education system in Nepal. ![DSC_5904](/assets/uploads/DSC_5904.webp) Somehow we assumed that the company would give us a relatively small donation in cash, but boy were we wrong! Ncell wanted to support Fida International's work in Nepal in the long haul with an intention to build entire schools in the forthcoming years! Stupendous! Fida International does a tremendous job helping villages to establish schools to where there are none. On the other hand, Fida also improves the standard of teaching in the already existing schools by focusing on the development of the most economically efficient school teaching. If - on top of that - Ncell will support the building of school infrastructures, these schools will be on the top of their class in Nepal! Somehow an incredibly profound thought: the children in the Shreenagar village might get a permanent school building - only because, with your help, we were able to put them into the spotlight!   **Media Circus** In Finland, we had already answered to the questions of the press and other medias, but in Nepal we were scheduled to appear in two real live press conferences. The other assembly was organised by the embassy and the other by Ncell, and altogether about a dozen reporters interviewed us. 
+![Press conference at the embassy!](/assets/uploads/DSC_57791.webp)
+*Press conference at the embassy!*
+ We really didn't know what to expect of the press conferences. We were bombarded with so many questions that we barely had time to answer all of them. In addition, they took of us and we appeared on a television interview. In the following days we started to receive the news - you guys were in this and that magazine, that channel broadcasted a story about you etc. In the end we'd appeared in all of the biggest newspapers in Nepal. We received more media attention in Nepal than an eye-catching campaign in Finland which a few years ago collected 1.5 million Euros for the Nepali school system. We were flabbergasted! 
+![Participants of the Ncell press conference!](/assets/uploads/DSC_5874.webp)
+*Participants of the Ncell press conference!*
+ All this felt somehow so enormous. Initially we had hoped our trip to become a phenomenon in Finland, and therefore published our blog and everything else only in Finnish. Now we started receiving dozens of supporting messages from Nepal in Facebook. We hadn't even considered how much our trip would interest the Nepali. Apparently a lot! --- In the next update we'll visit Princess Beads feeling for the atmosphere, taking model shots and checking out the jewellery! After that we'll start posting the updates from the return trip!

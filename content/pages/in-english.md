@@ -1,0 +1,37 @@
+---
+title: "In English"
+slug: "in-english"
+date: "2012-06-28"
+type: "page"
+---
+
+## Driving to Nepal - The Dream Movie
+
+**In 2012, five Finnish friends drove over 20,000 kilometers from Finland to Nepal in a 1989 Volkswagen Transporter nicknamed "Heffalump" (Möhköfantti). Their journey became Finland's first 100% crowdfunded documentary film.**
+
+### The Journey
+
+The route took them through Russia, Kazakhstan, Kyrgyzstan, China, Pakistan, and India before finally reaching Nepal. Along the way they faced border crossings, mountain passes at over 4,500 meters altitude, car breakdowns, and countless adventures.
+
+### The Cause
+
+But this wasn't just about the adventure. The trip was organized to help Nepalese women and children. Thanks to donations:
+
+- **Two new schools** were built in Nepal where children from all castes can study
+- **Jewelry made by women** from difficult backgrounds at a Nepalese shelter has been sold in Finland, giving these women income, education, and a better future
+
+### The Movie
+
+The hugely popular journey, followed by over 10,000 fans on social media, was turned into a documentary film. The story is an incredible collection of dreams, drama, successes, failures, and outright miracles.
+
+*"We want to inspire people with this film. The Driving to Nepal story deserves to be heard by everyone."* - Juho Leppänen
+
+### Watch the Full Movie with subtitles
+
+<div class="video-container">
+<video controls width="100%" style="max-width: 800px; display: block; margin: 1rem auto 2rem; aspect-ratio: 16/9;" poster="https://pub-e1f2ac35c79943dbb0fdba5cf836dbac.r2.dev/autollanepaliin-poster.jpg">
+  <source src="https://pub-e1f2ac35c79943dbb0fdba5cf836dbac.r2.dev/autollanepaliin-elokuva.webm" type="video/webm">
+  <track kind="subtitles" src="https://pub-e1f2ac35c79943dbb0fdba5cf836dbac.r2.dev/autollanepaliin-en.vtt" srclang="en" label="English" default>
+  Your browser does not support the video tag.
+</video>
+</div>
