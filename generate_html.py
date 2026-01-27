@@ -87,6 +87,8 @@ BASE_TEMPLATE = '''<!DOCTYPE html>
     <title>{title} - Autolla Nepaliin</title>
     <meta name="description" content="{description}">
     <link rel="canonical" href="https://autollanepaliin.fi{canonical}">
+    <link rel="stylesheet" href="/assets/style.css">
+    <link rel="preconnect" href="https://pub-e1f2ac35c79943dbb0fdba5cf836dbac.r2.dev">
     <!-- Open Graph -->
     <meta property="og:title" content="{title} - Autolla Nepaliin">
     <meta property="og:description" content="{description}">
@@ -105,272 +107,13 @@ BASE_TEMPLATE = '''<!DOCTYPE html>
     <link rel="alternate" hreflang="en" href="https://autollanepaliin.fi/in-english/">
     <link rel="alternate" hreflang="x-default" href="https://autollanepaliin.fi/">
     {extra_head}
-    <style>
-        :root {{
-            --primary: #d4a853;
-            --dark: #1a1a1a;
-            --light: #f5f5f5;
-            --text: #333;
-        }}
-        * {{ box-sizing: border-box; margin: 0; padding: 0; }}
-        html {{
-            font-size: 16px;
-            -webkit-text-size-adjust: 100%;
-            -moz-text-size-adjust: 100%;
-            text-size-adjust: 100%;
-        }}
-        body {{
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
-            line-height: 1.6;
-            color: var(--text);
-            background: var(--light);
-            font-size: 1rem;
-        }}
-        header {{
-            background: var(--dark);
-            color: white;
-            padding: 1rem;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }}
-        header nav {{
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 1rem;
-        }}
-        header a {{
-            color: var(--primary);
-            text-decoration: none;
-            font-weight: bold;
-        }}
-        header .logo {{ font-size: 1.5rem; }}
-        header ul {{
-            list-style: none;
-            display: flex;
-            gap: 1.5rem;
-            flex-wrap: wrap;
-        }}
-        header ul a {{ color: white; font-weight: normal; }}
-        header ul a:hover {{ color: var(--primary); }}
-        main {{
-            max-width: 800px;
-            margin: 2rem auto;
-            padding: 0 1rem;
-        }}
-        article {{
-            background: white;
-            padding: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }}
-        article h1 {{ color: var(--dark); margin-bottom: 0.5rem; }}
-        article .meta {{
-            color: #666;
-            margin-bottom: 1.5rem;
-            font-size: 0.9rem;
-        }}
-        article img {{
-            display: block;
-            max-width: 100%;
-            height: auto;
-            border-radius: 4px;
-            margin: 1rem 0;
-            clear: both;
-        }}
-        article p {{ margin-bottom: 1rem; }}
-        article h2, article h3 {{ margin: 1.5rem 0 0.75rem; color: var(--dark); }}
-        article a {{ color: var(--primary); }}
-        article ul, article ol {{ margin: 1rem 0 1rem 1.5rem; }}
-        article li {{ margin-bottom: 0.5rem; }}
-        article blockquote {{
-            border-left: 4px solid var(--primary);
-            padding-left: 1rem;
-            margin: 1rem 0;
-            font-style: italic;
-            color: #555;
-        }}
-        .post-list {{
-            list-style: none;
-        }}
-        .post-list li {{
-            background: white;
-            margin-bottom: 1rem;
-            padding: 1.5rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }}
-        .post-list h2 {{ margin: 0 0 0.5rem; font-size: 1.25rem; }}
-        .post-list h2 a {{ color: var(--dark); text-decoration: none; }}
-        .post-list h2 a:hover {{ color: var(--primary); }}
-        .post-list .meta {{ color: #666; font-size: 0.85rem; }}
-        .post-list .excerpt {{ color: #555; margin-top: 0.5rem; }}
-        .card-grid {{
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 1.5rem;
-            margin: 2rem 0;
-        }}
-        .card {{
-            background: white;
-            padding: 1.5rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            text-align: center;
-        }}
-        .card img {{
-            width: 150px;
-            height: 150px;
-            object-fit: cover;
-            border-radius: 50%;
-            margin: 1rem auto;
-            display: block;
-        }}
-        .card strong {{ font-size: 1.2rem; display: block; margin-bottom: 0.25rem; }}
-        .card em {{ color: var(--primary); font-style: normal; }}
-        .card em + em {{ color: #666; font-size: 0.9rem; }}
-        .card em + em::before {{ content: " · "; color: #999; }}
-        footer {{
-            background: var(--dark);
-            color: white;
-            padding: 2rem 1rem;
-            text-align: center;
-            margin-top: 3rem;
-        }}
-        footer a {{ color: var(--primary); }}
-        footer img {{ transition: filter 0.2s ease, opacity 0.2s ease; }}
-        .pagination {{
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-            margin-top: 2rem;
-        }}
-        .pagination a {{
-            background: var(--primary);
-            color: var(--dark);
-            padding: 0.5rem 1rem;
-            border-radius: 4px;
-            text-decoration: none;
-            font-weight: bold;
-        }}
-        .hero {{
-            background: var(--dark);
-            color: white;
-            padding: 4rem 1rem;
-            text-align: center;
-        }}
-        .hero h1 {{ font-size: 2.5rem; margin-bottom: 1rem; }}
-        .hero p {{ max-width: 600px; margin: 0 auto 2rem; opacity: 0.9; }}
-        .hero .cta {{
-            display: inline-block;
-            background: var(--primary);
-            color: var(--dark);
-            padding: 1rem 2rem;
-            border-radius: 4px;
-            text-decoration: none;
-            font-weight: bold;
-            margin: 0 0.5rem;
-        }}
-        .video-container {{
-            position: relative;
-            margin: 2rem 0;
-        }}
-        .video-container:has(iframe) {{
-            padding-bottom: 56.25%;
-        }}
-        .video-container iframe {{
-            position: absolute;
-            top: 0; left: 0;
-            width: 100%; height: 100%;
-            border: none;
-            border-radius: 8px;
-        }}
-        .btn-secondary {{
-            display: inline-block;
-            background: linear-gradient(135deg, var(--dark) 0%, #2a2a2a 100%);
-            color: white;
-            padding: 1rem 2.5rem;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 1.1rem;
-            letter-spacing: 0.5px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-            transition: all 0.3s ease;
-            border: 2px solid transparent;
-        }}
-        .btn-secondary:hover {{
-            background: linear-gradient(135deg, #2a2a2a 0%, var(--dark) 100%);
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
-            border-color: var(--primary);
-            color: var(--primary);
-        }}
-        .skip-link {{
-            position: absolute;
-            top: -40px;
-            left: 0;
-            background: var(--primary);
-            color: var(--dark);
-            padding: 8px 16px;
-            z-index: 1000;
-            text-decoration: none;
-            font-weight: bold;
-        }}
-        .skip-link:focus {{ top: 0; }}
-        .post-nav {{
-            display: flex;
-            justify-content: space-between;
-            gap: 1rem;
-            margin-top: 2rem;
-            padding-top: 1.5rem;
-            border-top: 1px solid #eee;
-        }}
-        .post-nav a {{
-            flex: 1;
-            padding: 1rem;
-            background: var(--light);
-            border-radius: 8px;
-            text-decoration: none;
-            color: var(--text);
-        }}
-        .post-nav a:hover {{ background: #e8e8e8; }}
-        .post-nav .prev {{ text-align: left; }}
-        .post-nav .next {{ text-align: right; }}
-        .post-nav .label {{ font-size: 0.8rem; color: #666; display: block; margin-bottom: 0.25rem; }}
-        .reading-time {{ color: #888; font-size: 0.85rem; }}
-        .categories {{ margin-top: 0.5rem; }}
-        .categories a {{
-            display: inline-block;
-            background: var(--light);
-            padding: 0.25rem 0.5rem;
-            border-radius: 4px;
-            font-size: 0.8rem;
-            margin-right: 0.5rem;
-            margin-bottom: 0.25rem;
-            text-decoration: none;
-            color: var(--text);
-        }}
-        .categories a:hover {{ background: #e0e0e0; }}
-        @media (max-width: 600px) {{
-            header nav {{ flex-direction: column; text-align: center; }}
-            header ul {{ justify-content: center; }}
-            .hero h1 {{ font-size: 1.75rem; }}
-            article {{ padding: 1rem; }}
-            .post-nav {{ flex-direction: column; }}
-        }}
-    </style>
 {structured_data}
 </head>
 <body>
     <a href="#main-content" class="skip-link">Skip to content</a>
     <header>
         <nav aria-label="Main navigation">
-            <a href="/" class="logo"><img src="/assets/uploads/Autolla_Nepaliin_Unelmien_elokuva_colormod1-300x164.png" alt="Autolla Nepaliin" style="height: 58px; vertical-align: middle;"></a>
+            <a href="/" class="logo"><img src="/assets/uploads/Autolla_Nepaliin_Unelmien_elokuva_colormod1-300x164.png" alt="Autolla Nepaliin"></a>
             <ul>
                 <li><a href="/blogi/">Blogi</a></li>
                 <li><a href="/mita/">Tarina</a></li>
@@ -1275,6 +1018,103 @@ Sitemap: https://autollanepaliin.fi/sitemap.xml
 '''
     (output_dir / 'robots.txt').write_text(robots_content, encoding='utf-8')
 
+def generate_headers(output_dir):
+    """Generate _headers for Cloudflare Pages."""
+    headers_content = '''# Custom headers for Cloudflare Pages
+
+/*
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.html
+  Cache-Control: public, max-age=600
+
+/feed.xml
+  Cache-Control: public, max-age=3600
+
+/sitemap.xml
+  Cache-Control: public, max-age=86400
+'''
+    (output_dir / '_headers').write_text(headers_content, encoding='utf-8')
+
+def generate_css(output_dir):
+    """Generate main CSS file."""
+    css_content = ''':root {
+    --primary: #d4a853;
+    --dark: #1a1a1a;
+    --light: #f5f5f5;
+    --text: #333;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: 16px; -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: var(--text); background: var(--light); }
+header { background: var(--dark); color: white; padding: 1rem; position: sticky; top: 0; z-index: 100; }
+header nav { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+header a { color: var(--primary); text-decoration: none; font-weight: bold; }
+header .logo img { height: 58px; vertical-align: middle; }
+header ul { list-style: none; display: flex; gap: 1.5rem; flex-wrap: wrap; }
+header ul a { color: white; font-weight: normal; }
+header ul a:hover { color: var(--primary); }
+main { max-width: 800px; margin: 2rem auto; padding: 0 1rem; }
+article { background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+article h1 { color: var(--dark); margin-bottom: 0.5rem; }
+article .meta { color: #666; margin-bottom: 1.5rem; font-size: 0.9rem; }
+article img { display: block; max-width: 100%; height: auto; border-radius: 4px; margin: 1rem 0; clear: both; }
+article p { margin-bottom: 1rem; }
+article h2, article h3 { margin: 1.5rem 0 0.75rem; color: var(--dark); }
+article a { color: var(--primary); }
+article ul, article ol { margin: 1rem 0 1rem 1.5rem; }
+article li { margin-bottom: 0.5rem; }
+article blockquote { border-left: 4px solid var(--primary); padding-left: 1rem; margin: 1rem 0; font-style: italic; color: #555; }
+.post-list { list-style: none; }
+.post-list li { background: white; margin-bottom: 1rem; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); overflow: hidden; }
+.post-list h2 { margin: 0 0 0.5rem; font-size: 1.25rem; }
+.post-list h2 a { color: var(--dark); text-decoration: none; }
+.post-list h2 a:hover { color: var(--primary); }
+.post-list .meta { color: #666; font-size: 0.85rem; }
+.post-list .excerpt { color: #555; margin-top: 0.5rem; }
+.card-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.5rem; margin: 2rem 0; }
+.card { background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); text-align: center; }
+.card img { width: 150px; height: 150px; object-fit: cover; border-radius: 50%; margin: 1rem auto; display: block; }
+.card strong { font-size: 1.2rem; display: block; margin-bottom: 0.25rem; }
+.card em { color: var(--primary); font-style: normal; }
+footer { background: var(--dark); color: white; padding: 2rem 1rem; text-align: center; margin-top: 3rem; }
+footer a { color: var(--primary); }
+footer img { transition: filter 0.2s ease, opacity 0.2s ease; }
+.pagination { display: flex; justify-content: center; gap: 1rem; margin-top: 2rem; }
+.pagination a { background: var(--primary); color: var(--dark); padding: 0.5rem 1rem; border-radius: 4px; text-decoration: none; font-weight: bold; }
+.hero { background: var(--dark); color: white; padding: 4rem 1rem; text-align: center; }
+.hero h1 { font-size: 2.5rem; margin-bottom: 1rem; }
+.hero p { max-width: 600px; margin: 0 auto 2rem; opacity: 0.9; }
+.hero .cta { display: inline-block; background: var(--primary); color: var(--dark); padding: 1rem 2rem; border-radius: 4px; text-decoration: none; font-weight: bold; margin: 0 0.5rem; }
+.video-container { position: relative; margin: 2rem 0; }
+.video-container:has(iframe) { padding-bottom: 56.25%; }
+.video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; border-radius: 8px; }
+.btn-secondary { display: inline-block; background: linear-gradient(135deg, var(--dark) 0%, #2a2a2a 100%); color: white; padding: 1rem 2.5rem; border-radius: 50px; text-decoration: none; font-weight: 600; font-size: 1.1rem; box-shadow: 0 4px 15px rgba(0,0,0,0.2); transition: all 0.3s ease; border: 2px solid transparent; }
+.btn-secondary:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.3); border-color: var(--primary); color: var(--primary); }
+.skip-link { position: absolute; top: -40px; left: 0; background: var(--primary); color: var(--dark); padding: 8px 16px; z-index: 1000; text-decoration: none; font-weight: bold; }
+.skip-link:focus { top: 0; }
+.post-nav { display: flex; justify-content: space-between; gap: 1rem; margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid #eee; }
+.post-nav a { flex: 1; padding: 1rem; background: var(--light); border-radius: 8px; text-decoration: none; color: var(--text); }
+.post-nav a:hover { background: #e8e8e8; }
+.post-nav .prev { text-align: left; }
+.post-nav .next { text-align: right; }
+.post-nav .label { font-size: 0.8rem; color: #666; display: block; margin-bottom: 0.25rem; }
+.reading-time { color: #888; font-size: 0.85rem; }
+.categories { margin-top: 0.5rem; }
+.categories a { display: inline-block; background: var(--light); padding: 0.25rem 0.5rem; border-radius: 4px; font-size: 0.8rem; margin-right: 0.5rem; margin-bottom: 0.25rem; text-decoration: none; color: var(--text); }
+.categories a:hover { background: #e0e0e0; }
+blockquote cite { font-style: normal; font-size: 0.9rem; display: block; margin-top: 0.5rem; }
+@media (max-width: 600px) { header nav { flex-direction: column; text-align: center; } header ul { justify-content: center; } .hero h1 { font-size: 1.75rem; } article { padding: 1rem; } .post-nav { flex-direction: column; } }
+'''
+    assets_dir = output_dir / 'assets'
+    assets_dir.mkdir(parents=True, exist_ok=True)
+    (assets_dir / 'style.css').write_text(css_content, encoding='utf-8')
+
 def main():
     # Create output directory
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
@@ -1389,6 +1229,14 @@ def main():
     # Generate robots.txt
     print("Generating robots.txt...")
     generate_robots_txt(OUTPUT_DIR)
+
+    # Generate _headers
+    print("Generating _headers...")
+    generate_headers(OUTPUT_DIR)
+
+    # Generate CSS
+    print("Generating style.css...")
+    generate_css(OUTPUT_DIR)
 
     # Generate 404 page
     page_404 = BASE_TEMPLATE.format(
