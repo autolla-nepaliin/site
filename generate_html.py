@@ -186,7 +186,7 @@ BASE_TEMPLATE = '''<!DOCTYPE html>
                 <a href="https://jjoy.fi/" target="_blank" rel="noopener nofollow"><img src="/assets/uploads/jjoy.png" alt="JJoy" style="height: 30px; filter: brightness(0) invert(1); opacity: 0.7;"></a>
                 <a href="https://kuntokauppa.fi/" target="_blank" rel="noopener nofollow"><img src="/assets/uploads/kuntokauppa.png" alt="Kuntokauppa" style="height: 30px; filter: brightness(0) invert(1); opacity: 0.7;"></a>
                 <a href="https://acaudit.fi/" target="_blank" rel="noopener nofollow"><img src="/assets/uploads/acaudit.png" alt="AC Audit" style="height: 30px; filter: brightness(0) invert(1); opacity: 0.7;"></a>
-                <a href="https://www.ncell.axiata.com/" target="_blank" rel="noopener nofollow"><img src="/assets/uploads/ncell.png" alt="Ncell" style="height: 30px; filter: brightness(0) invert(1); opacity: 0.7;"></a>
+                <a href="https://www.ncell.com.np/" target="_blank" rel="noopener nofollow"><img src="/assets/uploads/ncell.png" alt="Ncell" style="height: 30px; filter: brightness(0) invert(1); opacity: 0.7;"></a>
                 <a href="https://prosper.fi/" target="_blank" rel="noopener nofollow"><img src="/assets/uploads/prosper.png" alt="Prosper" style="height: 30px; filter: brightness(0) invert(1); opacity: 0.7;"></a>
                 <a href="https://tilatuote.fi/" target="_blank" rel="noopener nofollow"><img src="/assets/uploads/tilatuote.png" alt="Tilatuote" style="height: 30px; filter: brightness(0) invert(1); opacity: 0.7;"></a>
                 <a href="https://www.foto-silmunen.fi/" target="_blank" rel="noopener nofollow"><img src="/assets/uploads/silmunen.png" alt="Silmunen" style="height: 30px; filter: brightness(0) invert(1); opacity: 0.7;"></a>
@@ -1109,7 +1109,7 @@ footer img { transition: filter 0.2s ease, opacity 0.2s ease; }
 .categories a { display: inline-block; background: var(--light); padding: 0.25rem 0.5rem; border-radius: 4px; font-size: 0.8rem; margin-right: 0.5rem; margin-bottom: 0.25rem; text-decoration: none; color: var(--text); }
 .categories a:hover { background: #e0e0e0; }
 blockquote cite { font-style: normal; font-size: 0.9rem; display: block; margin-top: 0.5rem; }
-@media (max-width: 600px) { header nav { flex-direction: column; text-align: center; } header ul { justify-content: center; } .hero h1 { font-size: 1.75rem; } article { padding: 1rem; } .post-nav { flex-direction: column; } }
+@media (max-width: 600px) { header nav { flex-direction: column; text-align: center; } header ul { justify-content: center; } .hero h1 { font-size: 1.75rem; } .hero .cta { display: block; margin: 0.5rem auto; } article { padding: 1rem; } .post-nav { flex-direction: column; } }
 '''
     assets_dir = output_dir / 'assets'
     assets_dir.mkdir(parents=True, exist_ok=True)
