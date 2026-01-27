@@ -1,5 +1,5 @@
 ---
-title: "Nepal Days 47 & 48 – Germany, Denmark and Deep into Sweden!"
+title: "Days 47 & 48 from Nepal – Germany, Denmark and Deep into Sweden!"
 slug: "nepal-days-47-48-germany-denmark-sweden"
 date: "2012-10-23"
 type: "post"

@@ -1,5 +1,5 @@
 ---
-title: "Nepal Day 49 – Finland!"
+title: "Day 49 from Nepal – Finland!"
 slug: "nepal-day-49-finland"
 date: "2012-10-26"
 type: "post"

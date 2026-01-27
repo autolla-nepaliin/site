@@ -1,5 +1,5 @@
 ---
-title: "Nepal Day 46 – Vienna, Prague and Driving into the Night!"
+title: "Day 46 from Nepal – Vienna, Prague and Driving into the Night!"
 slug: "nepal-day-46-vienna-prague-driving-into-night"
 date: "2012-10-22"
 type: "post"

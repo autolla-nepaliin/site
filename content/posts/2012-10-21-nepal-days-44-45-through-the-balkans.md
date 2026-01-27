@@ -1,5 +1,5 @@
 ---
-title: "Nepal Days 44 & 45 – Through the Balkans - Bulgaria - Serbia - Hungary - Austria!"
+title: "Days 44 & 45 from Nepal – Through the Balkans - Bulgaria - Serbia - Hungary - Austria!"
 slug: "nepal-days-44-45-through-the-balkans"
 date: "2012-10-21"
 type: "post"

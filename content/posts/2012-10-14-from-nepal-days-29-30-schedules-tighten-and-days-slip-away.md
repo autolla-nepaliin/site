@@ -1,5 +1,5 @@
 ---
-title: "From Nepal Days 29. & 30. - Schedules Tighten and Days Slip Away!"
+title: "Days 29 & 30 from Nepal - Schedules Tighten and Days Slip Away!"
 slug: "from-nepal-days-29-30-schedules-tighten-and-days-slip-away"
 date: "2012-10-14"
 type: "post"

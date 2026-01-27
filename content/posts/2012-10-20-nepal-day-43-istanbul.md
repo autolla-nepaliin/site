@@ -1,5 +1,5 @@
 ---
-title: "Nepal Day 43 – Cappadocia - Istanbul - EUROPE!"
+title: "Day 43 from Nepal – Cappadocia - Istanbul - EUROPE!"
 slug: "nepal-day-43-istanbul"
 date: "2012-10-20"
 type: "post"
