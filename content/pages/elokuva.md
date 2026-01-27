@@ -51,7 +51,7 @@ Autolla Nepaliin on dokumenttielokuva viiden suomalaisen seikkailusta Nepaliin j
 
 <div class="video-container">
 <video controls width="100%" style="max-width: 800px; display: block; margin: 1rem auto 2rem; aspect-ratio: 16/9;" poster="https://pub-e1f2ac35c79943dbb0fdba5cf836dbac.r2.dev/autollanepaliin-poster.jpg">
-  <source src="https://pub-e1f2ac35c79943dbb0fdba5cf836dbac.r2.dev/autollanepaliin-elokuva.webm" type="video/webm">
+  <source src="https://pub-e1f2ac35c79943dbb0fdba5cf836dbac.r2.dev/autollanepaliin-elokuva.webm?v=2" type="video/webm">
   Your browser does not support the video tag.
 </video>
 </div>
