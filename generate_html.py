@@ -87,6 +87,24 @@ BASE_TEMPLATE = '''<!DOCTYPE html>
     <title>{title} - Autolla Nepaliin</title>
     <meta name="description" content="{description}">
     <link rel="canonical" href="https://autollanepaliin.fi{canonical}">
+    <!-- Open Graph -->
+    <meta property="og:title" content="{title} - Autolla Nepaliin">
+    <meta property="og:description" content="{description}">
+    <meta property="og:image" content="{og_image}">
+    <meta property="og:url" content="https://autollanepaliin.fi{canonical}">
+    <meta property="og:type" content="{og_type}">
+    <meta property="og:site_name" content="Autolla Nepaliin">
+    <meta property="og:locale" content="{og_locale}">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{title} - Autolla Nepaliin">
+    <meta name="twitter:description" content="{description}">
+    <meta name="twitter:image" content="{og_image}">
+    <!-- Hreflang -->
+    <link rel="alternate" hreflang="fi" href="https://autollanepaliin.fi/">
+    <link rel="alternate" hreflang="en" href="https://autollanepaliin.fi/in-english/">
+    <link rel="alternate" hreflang="x-default" href="https://autollanepaliin.fi/">
+    {extra_head}
     <style>
         :root {{
             --primary: #d4a853;
@@ -685,7 +703,7 @@ def generate_post_page(meta, content, output_path, prev_post=None, next_post=Non
 
     # Author display (hide for specific pages)
     slug = meta.get('slug', '')
-    hide_meta_pages = {'elokuva', 'tekijat', 'mita', 'in-english', 'kauppa'}
+    hide_meta_pages = {'elokuva', 'tekijat', 'mita', 'in-english', 'kauppa', 'vaikutus'}
 
     author_data = meta.get('author', 'Juho Leppänen')
     if isinstance(author_data, list):
@@ -744,13 +762,19 @@ def generate_post_page(meta, content, output_path, prev_post=None, next_post=Non
         jsonld["description"] = description
     structured_data = f'<script type="application/ld+json">{json.dumps(jsonld, ensure_ascii=False)}</script>'
 
+    og_image = f"https://autollanepaliin.fi{meta.get('featured_image', '')}" if meta.get('featured_image') else "https://pub-e1f2ac35c79943dbb0fdba5cf836dbac.r2.dev/autollanepaliin-poster.jpg"
+
     page = BASE_TEMPLATE.format(
         title=html.escape(title),
         lang=lang,
         description=html.escape(description),
         canonical=f'/{meta.get("slug", "")}/',
         content=page_content,
-        structured_data=structured_data
+        structured_data=structured_data,
+        og_image=og_image,
+        og_type='article',
+        og_locale='fi_FI' if lang == 'fi' else 'en_US',
+        extra_head=''
     )
 
     output_path.parent.mkdir(parents=True, exist_ok=True)
@@ -808,10 +832,14 @@ def generate_blog_index(posts, page_num, total_pages, output_dir):
     page = BASE_TEMPLATE.format(
         title=f'Blogi{" - Sivu " + str(page_num) if page_num > 1 else ""}',
         lang='fi',
-        description='Autolla Nepaliin matkakertomus ja päiväkirja',
+        description='Autolla Nepaliin matkakertomus ja päiväkirja. Seuraa viiden ystävän seikkailua Suomesta Nepaliin.',
         canonical=f'/blogi/{"sivu/" + str(page_num) + "/" if page_num > 1 else ""}',
         content=page_content,
-        structured_data=''
+        structured_data='',
+        og_image='https://pub-e1f2ac35c79943dbb0fdba5cf836dbac.r2.dev/autollanepaliin-poster.jpg',
+        og_type='website',
+        og_locale='fi_FI',
+        extra_head=''
     )
 
     if page_num == 1:
@@ -877,7 +905,11 @@ def generate_travel_diary_page(posts, output_dir):
         description='Autolla Nepaliin matkapäiväkirja aikajärjestyksessä - lue tarina alusta loppuun.',
         canonical='/matkapaivakirja/',
         content=page_content,
-        structured_data=''
+        structured_data='',
+        og_image='https://pub-e1f2ac35c79943dbb0fdba5cf836dbac.r2.dev/autollanepaliin-poster.jpg',
+        og_type='website',
+        og_locale='fi_FI',
+        extra_head=''
     )
 
     output_path = output_dir / 'matkapaivakirja' / 'index.html'
@@ -942,10 +974,14 @@ def generate_english_page(posts, output_dir):
     page = BASE_TEMPLATE.format(
         title='In English',
         lang='en',
-        description='Driving to Nepal - The Dream Movie. A Finnish adventure documentary.',
+        description='Watch Driving to Nepal free - Finland\'s first crowdfunded documentary. 5 friends, 20,000km, 2 schools built in Nepal.',
         canonical='/in-english/',
         content=page_content,
-        structured_data=''
+        structured_data='',
+        og_image='https://pub-e1f2ac35c79943dbb0fdba5cf836dbac.r2.dev/autollanepaliin-poster.jpg',
+        og_type='video.movie',
+        og_locale='en_US',
+        extra_head=''
     )
 
     output_path = output_dir / 'in-english' / 'index.html'
@@ -1013,13 +1049,42 @@ def generate_home_page(posts, output_dir):
     </main>
     '''
 
+    # JSON-LD for homepage
+    home_jsonld = json.dumps({
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "Organization",
+                "name": "Autolla Nepaliin",
+                "url": "https://autollanepaliin.fi",
+                "description": "5 ystävää, 20 000 km, 2 koulua Nepaliin. Suomen ensimmäinen joukkorahoitettu dokumenttielokuva.",
+                "foundingDate": "2012",
+                "sameAs": [
+                    "https://www.imdb.com/title/tt4103474/"
+                ]
+            },
+            {
+                "@type": "VideoObject",
+                "name": "Autolla Nepaliin - Traileri",
+                "description": "Traileri dokumenttielokuvasta Autolla Nepaliin - Unelmien elokuva",
+                "thumbnailUrl": "https://pub-e1f2ac35c79943dbb0fdba5cf836dbac.r2.dev/autollanepaliin-poster.jpg",
+                "uploadDate": "2014-01-01",
+                "contentUrl": "https://www.youtube.com/watch?v=TnGl01FkMMo"
+            }
+        ]
+    }, ensure_ascii=False)
+
     page = BASE_TEMPLATE.format(
         title='Etusivu',
         lang='fi',
-        description='Autolla Nepaliin - Unelmien elokuva. Neljän suomalaisen seikkailu Nepaliin ja takaisin.',
+        description='5 ystävää, 20 000 km, 1 unelma. Katso Suomen ensimmäinen joukkorahoitettu elokuva uskomattomasta seikkailusta hyvän asian puolesta.',
         canonical='/',
         content=page_content,
-        structured_data=''
+        structured_data=f'<script type="application/ld+json">{home_jsonld}</script>',
+        og_image='https://pub-e1f2ac35c79943dbb0fdba5cf836dbac.r2.dev/autollanepaliin-poster.jpg',
+        og_type='website',
+        og_locale='fi_FI',
+        extra_head=''
     )
 
     output_path = output_dir / 'index.html'
@@ -1087,6 +1152,119 @@ def generate_rss_feed(posts, output_dir):
 
     # Write RSS feed to root
     (output_dir / 'feed.xml').write_text(rss, encoding='utf-8')
+
+def generate_sitemap(posts, pages, output_dir):
+    """Generate sitemap.xml for the site."""
+    from datetime import datetime
+
+    urls = []
+
+    # Homepage - highest priority
+    urls.append(('https://autollanepaliin.fi/', '1.0', 'weekly'))
+
+    # Main pages
+    main_pages = ['in-english', 'elokuva', 'mita', 'kauppa', 'tekijat', 'blogi', 'matkapaivakirja', 'vaikutus']
+    for slug in main_pages:
+        urls.append((f'https://autollanepaliin.fi/{slug}/', '0.8', 'monthly'))
+
+    # All posts
+    for post in posts:
+        slug = post.get('slug', '')
+        if slug:
+            urls.append((f'https://autollanepaliin.fi/{slug}/', '0.6', 'yearly'))
+
+    # All pages
+    for page in pages:
+        slug = page.get('slug', '')
+        if slug and slug not in main_pages:
+            urls.append((f'https://autollanepaliin.fi/{slug}/', '0.5', 'yearly'))
+
+    xml_urls = ''
+    for url, priority, changefreq in urls:
+        xml_urls += f'''  <url>
+    <loc>{url}</loc>
+    <changefreq>{changefreq}</changefreq>
+    <priority>{priority}</priority>
+  </url>
+'''
+
+    sitemap = f'''<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+{xml_urls}</urlset>'''
+
+    (output_dir / 'sitemap.xml').write_text(sitemap, encoding='utf-8')
+
+def generate_llms_txt(output_dir):
+    """Generate llms.txt for LLM consumption."""
+    llms_content = '''# Autolla Nepaliin - Driving to Nepal
+
+> 5 friends, 20,000 km, 1 dream: Finland's first 100% crowdfunded documentary that built 2 schools in Nepal.
+
+## What is this?
+
+Autolla Nepaliin (Driving to Nepal) is a Finnish documentary film and charity project. In 2012, five Finnish friends drove from Finland to Nepal in a 1989 Volkswagen Transporter van nicknamed "Möhköfantti" (Heffalump). Their 20,000 km journey through Russia, Kazakhstan, Kyrgyzstan, China, Pakistan, and India became Finland's first entirely crowdfunded documentary film.
+
+## Key Facts
+
+- **Journey**: 20,000 km from Finland to Nepal and back (2012)
+- **Vehicle**: 1989 VW Transporter T3 nicknamed "Möhköfantti"
+- **Route**: Finland → Russia → Kazakhstan → Kyrgyzstan → China → Pakistan → India → Nepal
+- **Documentary**: "Autolla Nepaliin - Unelmien elokuva" (2014)
+- **Funding**: First 100% crowdfunded Finnish film
+- **Award**: Won Audience Jussi (Finnish Oscar) in 2015
+- **IMDB**: https://www.imdb.com/title/tt4103474/
+
+## Impact in Nepal
+
+The project has had lasting impact:
+- **15+ school buildings** constructed
+- **80+ schools** supported in total
+- **27,000 children** reached annually (as of 2021)
+- **Girls' enrollment** increased from 25% to over 50%
+- Schools registered as government schools (sustainable funding)
+- **€134,770+** donated through jewelry sales by 2025
+
+## The Cause
+
+The mission was to help Dalit (untouchable caste) children get education and support women at Princess Beads shelter who escaped domestic violence. The women make handcrafted jewelry, which is sold to fund their education and livelihood.
+
+## Store of Hope → Kaiko Clothing
+
+The jewelry shop "Store of Hope" was founded in 2012. In 2020 it merged with Finnish brand Kaiko Clothing, which continues selling Nepalese jewelry with 7% of profits going to Nepal.
+
+## Why This Story Matters
+
+This project demonstrates:
+1. **Young people can change the world** - Started by friends in their 20s with no film experience
+2. **Dreams become reality** through persistence and community support
+3. **Sustainable charity** - Created lasting infrastructure, not just one-time aid
+4. **Crowdfunding power** - Proved community funding can produce professional films
+5. **Adventure with purpose** - Combined personal challenge with meaningful impact
+
+## Quotable
+
+"Nuorten unelmoinnilla pitää olla aina tilaa, sitä pitää aina pystyä kannustamaan ja mahdollistamaan."
+("There must always be room for young people's dreams; we must always be able to encourage and enable them.")
+— Juho Leppänen, project founder
+
+## Watch Free
+
+The full documentary with English subtitles is available free at:
+https://autollanepaliin.fi/in-english/
+
+## Links
+
+- Website: https://autollanepaliin.fi
+- English page: https://autollanepaliin.fi/in-english/
+- IMDB: https://www.imdb.com/title/tt4103474/
+- Jewelry shop: https://kaikoclothing.com/collections/jewelry
+
+## Contact
+
+For media inquiries: lahjoita-tietokone@autollanepaliin.fi
+'''
+
+    (output_dir / 'llms.txt').write_text(llms_content, encoding='utf-8')
 
 def main():
     # Create output directory
@@ -1191,6 +1369,14 @@ def main():
     print("Generating RSS feed...")
     generate_rss_feed(posts, OUTPUT_DIR)
 
+    # Generate sitemap
+    print("Generating sitemap...")
+    generate_sitemap(posts, pages, OUTPUT_DIR)
+
+    # Generate llms.txt
+    print("Generating llms.txt...")
+    generate_llms_txt(OUTPUT_DIR)
+
     # Generate 404 page
     page_404 = BASE_TEMPLATE.format(
         title='404 - Sivua ei löydy',
@@ -1206,7 +1392,11 @@ def main():
             </article>
         </main>
         ''',
-        structured_data=''
+        structured_data='',
+        og_image='https://pub-e1f2ac35c79943dbb0fdba5cf836dbac.r2.dev/autollanepaliin-poster.jpg',
+        og_type='website',
+        og_locale='fi_FI',
+        extra_head=''
     )
     (OUTPUT_DIR / '404.html').write_text(page_404, encoding='utf-8')
 

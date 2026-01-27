@@ -5,6 +5,24 @@ type: "page"
 language: "fi"
 ---
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Autolla Nepaliin - Tarina",
+  "description": "Viiden suomalaisen ystävän tarina: unelmasta 20 000 kilometrin matkaan ja Suomen ensimmäiseen joukkorahoitettuun elokuvaan.",
+  "author": {
+    "@type": "Person",
+    "name": "Juho Leppänen"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Autolla Nepaliin"
+  },
+  "mainEntityOfPage": "https://autollanepaliin.fi/mita/"
+}
+</script>
+
 ## Unelma auttaa
 
 Juholla on unelma oikeudenmukaisemmasta maailmasta. Työskennellessään Aasiassa hän näkee omin silmin kastittomien lasten ja naisten vaikeat olot Nepalissa. Lapset, joilla ei ole mahdollisuutta käydä koulua. Naiset, jotka ovat joutuneet pakenemaan väkivaltaisia suhteita ilman toivoa paremmasta tulevaisuudesta.
