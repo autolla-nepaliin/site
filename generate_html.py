@@ -1266,6 +1266,15 @@ For media inquiries: lahjoita-tietokone@autollanepaliin.fi
 
     (output_dir / 'llms.txt').write_text(llms_content, encoding='utf-8')
 
+def generate_robots_txt(output_dir):
+    """Generate robots.txt with sitemap reference."""
+    robots_content = '''User-agent: *
+Allow: /
+
+Sitemap: https://autollanepaliin.fi/sitemap.xml
+'''
+    (output_dir / 'robots.txt').write_text(robots_content, encoding='utf-8')
+
 def main():
     # Create output directory
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
@@ -1376,6 +1385,10 @@ def main():
     # Generate llms.txt
     print("Generating llms.txt...")
     generate_llms_txt(OUTPUT_DIR)
+
+    # Generate robots.txt
+    print("Generating robots.txt...")
+    generate_robots_txt(OUTPUT_DIR)
 
     # Generate 404 page
     page_404 = BASE_TEMPLATE.format(
