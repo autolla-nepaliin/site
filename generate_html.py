@@ -77,6 +77,11 @@ except ImportError:
 
 OUTPUT_DIR = Path("dist")
 CONTENT_DIR = Path("content")
+R2_UPLOADS = "https://pub-e1f2ac35c79943dbb0fdba5cf836dbac.r2.dev/uploads"
+
+def rewrite_upload_urls(html_str):
+    """Rewrite /assets/uploads/ URLs to R2."""
+    return html_str.replace('/assets/uploads/', f'{R2_UPLOADS}/')
 
 # HTML Template
 BASE_TEMPLATE = '''<!DOCTYPE html>
@@ -113,7 +118,7 @@ BASE_TEMPLATE = '''<!DOCTYPE html>
     <a href="#main-content" class="skip-link">Skip to content</a>
     <header>
         <nav aria-label="Main navigation">
-            <a href="/" class="logo"><img src="/assets/uploads/Autolla_Nepaliin_Unelmien_elokuva_colormod1-300x164.png" alt="Autolla Nepaliin"></a>
+            <a href="/" class="logo"><img src="https://pub-e1f2ac35c79943dbb0fdba5cf836dbac.r2.dev/uploads/Autolla_Nepaliin_Unelmien_elokuva_colormod1-300x164.png" alt="Autolla Nepaliin"></a>
             <ul>
                 <li><a href="/blogi/">Blogi</a></li>
                 <li><a href="/mita/">Tarina</a></li>
@@ -136,10 +141,10 @@ BASE_TEMPLATE = '''<!DOCTYPE html>
             <p style="font-size: 0.9rem; opacity: 0.8; margin-bottom: 1rem;">Elokuvan projektista tekivät:</p>
             <div style="display: flex; justify-content: center; align-items: center; gap: 2rem; flex-wrap: wrap;">
                 <a href="https://www.elicreative.fi/" target="_blank" rel="noopener nofollow">
-                    <img src="/assets/uploads/ELI-logo-01-150x150.png" alt="Eli Creative" style="height: 50px; filter: brightness(0) invert(1);">
+                    <img src="https://pub-e1f2ac35c79943dbb0fdba5cf836dbac.r2.dev/uploads/ELI-logo-01-150x150.png" alt="Eli Creative" style="height: 50px; filter: brightness(0) invert(1);">
                 </a>
                 <a href="https://blacklionpictures.fi/" target="_blank" rel="noopener nofollow">
-                    <img src="/assets/uploads/blacklion_pictures_logo_A3_72dpi_white-106x150.png" alt="Black Lion Pictures" style="height: 50px;">
+                    <img src="https://pub-e1f2ac35c79943dbb0fdba5cf836dbac.r2.dev/uploads/blacklion_pictures_logo_A3_72dpi_white-106x150.png" alt="Black Lion Pictures" style="height: 50px;">
                 </a>
             </div>
         </div>
@@ -147,50 +152,50 @@ BASE_TEMPLATE = '''<!DOCTYPE html>
         <div style="margin-top: 1.5rem;">
             <p style="font-size: 0.9rem; opacity: 0.8; margin-bottom: 1rem;">Projektin mahdollistivat:</p>
             <div style="display: flex; justify-content: center; align-items: center; gap: 1.5rem; flex-wrap: wrap; max-width: 800px; margin: 0 auto;">
-                <a href="https://www.dreamdo.com/" target="_blank" rel="noopener nofollow"><img src="/assets/uploads/logo-dreamdo.png" alt="Dreamdo" style="height: 35px; filter: brightness(0) invert(1); opacity: 0.8;"></a>
-                <a href="https://kameratori.fi/" target="_blank" rel="noopener nofollow"><img src="/assets/uploads/logo-kameratori.png" alt="Kameratori" style="height: 35px; filter: brightness(0) invert(1); opacity: 0.8;"></a>
-                <a href="https://kuvastin.fi/" target="_blank" rel="noopener nofollow"><img src="/assets/uploads/logo-kuvastin.png" alt="Kuvastin" style="height: 35px; filter: brightness(0) invert(1); opacity: 0.8;"></a>
-                <a href="https://moses.fi/" target="_blank" rel="noopener nofollow"><img src="/assets/uploads/logo-moses.png" alt="Moses" style="height: 35px; filter: brightness(0) invert(1); opacity: 0.8;"></a>
-                <a href="https://narvik.fi/" target="_blank" rel="noopener nofollow"><img src="/assets/uploads/logo-narvik.png" alt="Narvik" style="height: 35px; filter: brightness(0) invert(1); opacity: 0.8;"></a>
-                <a href="https://vuokrakamera.fi/" target="_blank" rel="noopener nofollow"><img src="/assets/uploads/vuokrakamera.png" alt="Vuokrakamera" style="height: 35px; filter: brightness(0) invert(1); opacity: 0.8;"></a>
-                <a href="https://www.varusteleka.fi/" target="_blank" rel="noopener nofollow"><img src="/assets/uploads/Varusteleka.png" alt="Varusteleka" style="height: 35px; filter: brightness(0) invert(1); opacity: 0.8;"></a>
-                <a href="https://www.volkswagen.fi/" target="_blank" rel="noopener nofollow"><img src="/assets/uploads/vvauto.png" alt="VV-Auto" style="height: 35px; filter: brightness(0) invert(1); opacity: 0.8;"></a>
+                <a href="https://www.dreamdo.com/" target="_blank" rel="noopener nofollow"><img src="https://pub-e1f2ac35c79943dbb0fdba5cf836dbac.r2.dev/uploads/logo-dreamdo.png" alt="Dreamdo" style="height: 35px; filter: brightness(0) invert(1); opacity: 0.8;"></a>
+                <a href="https://kameratori.fi/" target="_blank" rel="noopener nofollow"><img src="https://pub-e1f2ac35c79943dbb0fdba5cf836dbac.r2.dev/uploads/logo-kameratori.png" alt="Kameratori" style="height: 35px; filter: brightness(0) invert(1); opacity: 0.8;"></a>
+                <a href="https://kuvastin.fi/" target="_blank" rel="noopener nofollow"><img src="https://pub-e1f2ac35c79943dbb0fdba5cf836dbac.r2.dev/uploads/logo-kuvastin.png" alt="Kuvastin" style="height: 35px; filter: brightness(0) invert(1); opacity: 0.8;"></a>
+                <a href="https://moses.fi/" target="_blank" rel="noopener nofollow"><img src="https://pub-e1f2ac35c79943dbb0fdba5cf836dbac.r2.dev/uploads/logo-moses.png" alt="Moses" style="height: 35px; filter: brightness(0) invert(1); opacity: 0.8;"></a>
+                <a href="https://narvik.fi/" target="_blank" rel="noopener nofollow"><img src="https://pub-e1f2ac35c79943dbb0fdba5cf836dbac.r2.dev/uploads/logo-narvik.png" alt="Narvik" style="height: 35px; filter: brightness(0) invert(1); opacity: 0.8;"></a>
+                <a href="https://vuokrakamera.fi/" target="_blank" rel="noopener nofollow"><img src="https://pub-e1f2ac35c79943dbb0fdba5cf836dbac.r2.dev/uploads/vuokrakamera.png" alt="Vuokrakamera" style="height: 35px; filter: brightness(0) invert(1); opacity: 0.8;"></a>
+                <a href="https://www.varusteleka.fi/" target="_blank" rel="noopener nofollow"><img src="https://pub-e1f2ac35c79943dbb0fdba5cf836dbac.r2.dev/uploads/Varusteleka.png" alt="Varusteleka" style="height: 35px; filter: brightness(0) invert(1); opacity: 0.8;"></a>
+                <a href="https://www.volkswagen.fi/" target="_blank" rel="noopener nofollow"><img src="https://pub-e1f2ac35c79943dbb0fdba5cf836dbac.r2.dev/uploads/vvauto.png" alt="VV-Auto" style="height: 35px; filter: brightness(0) invert(1); opacity: 0.8;"></a>
             </div>
         </div>
 
         <div style="margin-top: 1.5rem; padding-top: 1rem;">
             <p style="font-size: 0.9rem; opacity: 0.8; margin-bottom: 1rem;">Meistä on kirjoitettu:</p>
             <div style="display: flex; justify-content: center; align-items: center; gap: 1.5rem; flex-wrap: wrap; max-width: 900px; margin: 0 auto;">
-                <a href="https://yle.fi/" target="_blank" rel="noopener nofollow"><img src="/assets/uploads/yle.png" alt="YLE" style="height: 30px; filter: brightness(0) invert(1); opacity: 0.7;"></a>
-                <a href="https://www.aamulehti.fi/" target="_blank" rel="noopener nofollow"><img src="/assets/uploads/aamulehti.png" alt="Aamulehti" style="height: 30px; filter: brightness(0) invert(1); opacity: 0.7;"></a>
-                <a href="https://www.is.fi/" target="_blank" rel="noopener nofollow"><img src="/assets/uploads/iltasanomat.png" alt="Ilta-Sanomat" style="height: 30px; filter: brightness(0) invert(1); opacity: 0.7;"></a>
-                <a href="https://www.radionova.fi/" target="_blank" rel="noopener nofollow"><img src="/assets/uploads/radionova.png" alt="Radio Nova" style="height: 30px;"></a>
-                <a href="https://www.tamperelainen.fi/" target="_blank" rel="noopener nofollow"><img src="/assets/uploads/tamperelainen.png" alt="Tamperelainen" style="height: 30px; filter: brightness(0) invert(1); opacity: 0.7;"></a>
-                <a href="https://www.city.fi/" target="_blank" rel="noopener nofollow"><img src="/assets/uploads/city.png" alt="City" style="height: 30px; filter: brightness(0) invert(1); opacity: 0.7;"></a>
-                <a href="https://madventures.tv/" target="_blank" rel="noopener nofollow"><img src="/assets/uploads/madventures.png" alt="Madventures" style="height: 30px; filter: brightness(0) invert(1); opacity: 0.7;"></a>
-                <a href="https://global.finland.fi/" target="_blank" rel="noopener nofollow"><img src="/assets/uploads/globalfinland.png" alt="Global Finland" style="height: 30px; filter: brightness(0) invert(1); opacity: 0.7;"></a>
-                <a href="https://nuotta.com/" target="_blank" rel="noopener nofollow"><img src="/assets/uploads/nuotta.png" alt="Nuotta" style="height: 30px; filter: brightness(0) invert(1); opacity: 0.7;"></a>
-                <a href="https://www.kangasalansanomat.fi/" target="_blank" rel="noopener nofollow"><img src="/assets/uploads/KangasalanSanomat.png" alt="Kangasalan Sanomat" style="height: 30px; filter: brightness(0) invert(1); opacity: 0.7;"></a>
-                <a href="https://www.seurakuntalainen.fi/" target="_blank" rel="noopener nofollow"><img src="/assets/uploads/seurakuntalainen.png" alt="Seurakuntalainen" style="height: 30px; filter: brightness(0) invert(1); opacity: 0.7;"></a>
-                <a href="https://www.sipoonsanomat.fi/" target="_blank" rel="noopener nofollow"><img src="/assets/uploads/sipoonsanomat.png" alt="Sipoon Sanomat" style="height: 30px; filter: brightness(0) invert(1); opacity: 0.7;"></a>
-                <a href="https://kosa.fi/" target="_blank" rel="noopener nofollow"><img src="/assets/uploads/kosa.png" alt="Kosa" style="height: 30px; filter: brightness(0) invert(1); opacity: 0.7;"></a>
+                <a href="https://yle.fi/" target="_blank" rel="noopener nofollow"><img src="https://pub-e1f2ac35c79943dbb0fdba5cf836dbac.r2.dev/uploads/yle.png" alt="YLE" style="height: 30px; filter: brightness(0) invert(1); opacity: 0.7;"></a>
+                <a href="https://www.aamulehti.fi/" target="_blank" rel="noopener nofollow"><img src="https://pub-e1f2ac35c79943dbb0fdba5cf836dbac.r2.dev/uploads/aamulehti.png" alt="Aamulehti" style="height: 30px; filter: brightness(0) invert(1); opacity: 0.7;"></a>
+                <a href="https://www.is.fi/" target="_blank" rel="noopener nofollow"><img src="https://pub-e1f2ac35c79943dbb0fdba5cf836dbac.r2.dev/uploads/iltasanomat.png" alt="Ilta-Sanomat" style="height: 30px; filter: brightness(0) invert(1); opacity: 0.7;"></a>
+                <a href="https://www.radionova.fi/" target="_blank" rel="noopener nofollow"><img src="https://pub-e1f2ac35c79943dbb0fdba5cf836dbac.r2.dev/uploads/radionova.png" alt="Radio Nova" style="height: 30px;"></a>
+                <a href="https://www.tamperelainen.fi/" target="_blank" rel="noopener nofollow"><img src="https://pub-e1f2ac35c79943dbb0fdba5cf836dbac.r2.dev/uploads/tamperelainen.png" alt="Tamperelainen" style="height: 30px; filter: brightness(0) invert(1); opacity: 0.7;"></a>
+                <a href="https://www.city.fi/" target="_blank" rel="noopener nofollow"><img src="https://pub-e1f2ac35c79943dbb0fdba5cf836dbac.r2.dev/uploads/city.png" alt="City" style="height: 30px; filter: brightness(0) invert(1); opacity: 0.7;"></a>
+                <a href="https://madventures.tv/" target="_blank" rel="noopener nofollow"><img src="https://pub-e1f2ac35c79943dbb0fdba5cf836dbac.r2.dev/uploads/madventures.png" alt="Madventures" style="height: 30px; filter: brightness(0) invert(1); opacity: 0.7;"></a>
+                <a href="https://global.finland.fi/" target="_blank" rel="noopener nofollow"><img src="https://pub-e1f2ac35c79943dbb0fdba5cf836dbac.r2.dev/uploads/globalfinland.png" alt="Global Finland" style="height: 30px; filter: brightness(0) invert(1); opacity: 0.7;"></a>
+                <a href="https://nuotta.com/" target="_blank" rel="noopener nofollow"><img src="https://pub-e1f2ac35c79943dbb0fdba5cf836dbac.r2.dev/uploads/nuotta.png" alt="Nuotta" style="height: 30px; filter: brightness(0) invert(1); opacity: 0.7;"></a>
+                <a href="https://www.kangasalansanomat.fi/" target="_blank" rel="noopener nofollow"><img src="https://pub-e1f2ac35c79943dbb0fdba5cf836dbac.r2.dev/uploads/KangasalanSanomat.png" alt="Kangasalan Sanomat" style="height: 30px; filter: brightness(0) invert(1); opacity: 0.7;"></a>
+                <a href="https://www.seurakuntalainen.fi/" target="_blank" rel="noopener nofollow"><img src="https://pub-e1f2ac35c79943dbb0fdba5cf836dbac.r2.dev/uploads/seurakuntalainen.png" alt="Seurakuntalainen" style="height: 30px; filter: brightness(0) invert(1); opacity: 0.7;"></a>
+                <a href="https://www.sipoonsanomat.fi/" target="_blank" rel="noopener nofollow"><img src="https://pub-e1f2ac35c79943dbb0fdba5cf836dbac.r2.dev/uploads/sipoonsanomat.png" alt="Sipoon Sanomat" style="height: 30px; filter: brightness(0) invert(1); opacity: 0.7;"></a>
+                <a href="https://kosa.fi/" target="_blank" rel="noopener nofollow"><img src="https://pub-e1f2ac35c79943dbb0fdba5cf836dbac.r2.dev/uploads/kosa.png" alt="Kosa" style="height: 30px; filter: brightness(0) invert(1); opacity: 0.7;"></a>
             </div>
         </div>
 
         <div style="margin-top: 1.5rem; padding-top: 1rem;">
             <p style="font-size: 0.9rem; opacity: 0.8; margin-bottom: 1rem;">Projektia tukivat mainoksilla:</p>
             <div style="display: flex; justify-content: center; align-items: center; gap: 1.5rem; flex-wrap: wrap; max-width: 900px; margin: 0 auto;">
-                <a href="https://topshot.fi/" target="_blank" rel="noopener nofollow"><img src="/assets/uploads/topshot.png" alt="Topshot" style="height: 30px; filter: brightness(0) invert(1); opacity: 0.7;"></a>
-                <a href="https://easydiili.fi/" target="_blank" rel="noopener nofollow"><img src="/assets/uploads/easydiili.png" alt="Easydiili" style="height: 30px;"></a>
-                <a href="https://jpj-wood.fi/" target="_blank" rel="noopener nofollow"><img src="/assets/uploads/jpj.png" alt="JPJ" style="height: 30px; filter: brightness(0) invert(1); opacity: 0.7;"></a>
-                <a href="https://jjoy.fi/" target="_blank" rel="noopener nofollow"><img src="/assets/uploads/jjoy.png" alt="JJoy" style="height: 30px; filter: brightness(0) invert(1); opacity: 0.7;"></a>
-                <a href="https://kuntokauppa.fi/" target="_blank" rel="noopener nofollow"><img src="/assets/uploads/kuntokauppa.png" alt="Kuntokauppa" style="height: 30px; filter: brightness(0) invert(1); opacity: 0.7;"></a>
-                <a href="https://acaudit.fi/" target="_blank" rel="noopener nofollow"><img src="/assets/uploads/acaudit.png" alt="AC Audit" style="height: 30px; filter: brightness(0) invert(1); opacity: 0.7;"></a>
-                <a href="https://www.ncell.com.np/" target="_blank" rel="noopener nofollow"><img src="/assets/uploads/ncell.png" alt="Ncell" style="height: 30px; filter: brightness(0) invert(1); opacity: 0.7;"></a>
-                <a href="https://prosper.fi/" target="_blank" rel="noopener nofollow"><img src="/assets/uploads/prosper.png" alt="Prosper" style="height: 30px; filter: brightness(0) invert(1); opacity: 0.7;"></a>
-                <a href="https://tilatuote.fi/" target="_blank" rel="noopener nofollow"><img src="/assets/uploads/tilatuote.png" alt="Tilatuote" style="height: 30px; filter: brightness(0) invert(1); opacity: 0.7;"></a>
-                <a href="https://www.foto-silmunen.fi/" target="_blank" rel="noopener nofollow"><img src="/assets/uploads/silmunen.png" alt="Silmunen" style="height: 30px; filter: brightness(0) invert(1); opacity: 0.7;"></a>
-                <a href="https://imboys.com/" target="_blank" rel="noopener nofollow"><img src="/assets/uploads/imboys.png" alt="Imboys" style="height: 30px; filter: brightness(0) invert(1); opacity: 0.7;"></a>
+                <a href="https://topshot.fi/" target="_blank" rel="noopener nofollow"><img src="https://pub-e1f2ac35c79943dbb0fdba5cf836dbac.r2.dev/uploads/topshot.png" alt="Topshot" style="height: 30px; filter: brightness(0) invert(1); opacity: 0.7;"></a>
+                <a href="https://easydiili.fi/" target="_blank" rel="noopener nofollow"><img src="https://pub-e1f2ac35c79943dbb0fdba5cf836dbac.r2.dev/uploads/easydiili.png" alt="Easydiili" style="height: 30px;"></a>
+                <a href="https://jpj-wood.fi/" target="_blank" rel="noopener nofollow"><img src="https://pub-e1f2ac35c79943dbb0fdba5cf836dbac.r2.dev/uploads/jpj.png" alt="JPJ" style="height: 30px; filter: brightness(0) invert(1); opacity: 0.7;"></a>
+                <a href="https://jjoy.fi/" target="_blank" rel="noopener nofollow"><img src="https://pub-e1f2ac35c79943dbb0fdba5cf836dbac.r2.dev/uploads/jjoy.png" alt="JJoy" style="height: 30px; filter: brightness(0) invert(1); opacity: 0.7;"></a>
+                <a href="https://kuntokauppa.fi/" target="_blank" rel="noopener nofollow"><img src="https://pub-e1f2ac35c79943dbb0fdba5cf836dbac.r2.dev/uploads/kuntokauppa.png" alt="Kuntokauppa" style="height: 30px; filter: brightness(0) invert(1); opacity: 0.7;"></a>
+                <a href="https://acaudit.fi/" target="_blank" rel="noopener nofollow"><img src="https://pub-e1f2ac35c79943dbb0fdba5cf836dbac.r2.dev/uploads/acaudit.png" alt="AC Audit" style="height: 30px; filter: brightness(0) invert(1); opacity: 0.7;"></a>
+                <a href="https://www.ncell.com.np/" target="_blank" rel="noopener nofollow"><img src="https://pub-e1f2ac35c79943dbb0fdba5cf836dbac.r2.dev/uploads/ncell.png" alt="Ncell" style="height: 30px; filter: brightness(0) invert(1); opacity: 0.7;"></a>
+                <a href="https://prosper.fi/" target="_blank" rel="noopener nofollow"><img src="https://pub-e1f2ac35c79943dbb0fdba5cf836dbac.r2.dev/uploads/prosper.png" alt="Prosper" style="height: 30px; filter: brightness(0) invert(1); opacity: 0.7;"></a>
+                <a href="https://tilatuote.fi/" target="_blank" rel="noopener nofollow"><img src="https://pub-e1f2ac35c79943dbb0fdba5cf836dbac.r2.dev/uploads/tilatuote.png" alt="Tilatuote" style="height: 30px; filter: brightness(0) invert(1); opacity: 0.7;"></a>
+                <a href="https://www.foto-silmunen.fi/" target="_blank" rel="noopener nofollow"><img src="https://pub-e1f2ac35c79943dbb0fdba5cf836dbac.r2.dev/uploads/silmunen.png" alt="Silmunen" style="height: 30px; filter: brightness(0) invert(1); opacity: 0.7;"></a>
+                <a href="https://imboys.com/" target="_blank" rel="noopener nofollow"><img src="https://pub-e1f2ac35c79943dbb0fdba5cf836dbac.r2.dev/uploads/imboys.png" alt="Imboys" style="height: 30px; filter: brightness(0) invert(1); opacity: 0.7;"></a>
             </div>
         </div>
     </footer>
@@ -500,12 +505,19 @@ def generate_post_page(meta, content, output_path, prev_post=None, next_post=Non
         }
     }
     if meta.get('featured_image'):
-        jsonld["image"] = f"https://autollanepaliin.fi{meta.get('featured_image')}"
+        fi = meta.get('featured_image')
+        jsonld["image"] = f"{R2_UPLOADS}/{fi.split('/assets/uploads/')[-1]}" if '/assets/uploads/' in fi else f"https://autollanepaliin.fi{fi}"
     if description:
         jsonld["description"] = description
     structured_data = f'<script type="application/ld+json">{json.dumps(jsonld, ensure_ascii=False)}</script>'
 
-    og_image = f"https://autollanepaliin.fi{meta.get('featured_image', '')}" if meta.get('featured_image') else "https://pub-e1f2ac35c79943dbb0fdba5cf836dbac.r2.dev/autollanepaliin-poster.jpg"
+    featured = meta.get('featured_image', '')
+    if featured and '/assets/uploads/' in featured:
+        og_image = f"{R2_UPLOADS}/{featured.split('/assets/uploads/')[-1]}"
+    elif featured:
+        og_image = f"https://autollanepaliin.fi{featured}"
+    else:
+        og_image = "https://pub-e1f2ac35c79943dbb0fdba5cf836dbac.r2.dev/autollanepaliin-poster.jpg"
 
     page = BASE_TEMPLATE.format(
         title=html.escape(title),
@@ -521,7 +533,7 @@ def generate_post_page(meta, content, output_path, prev_post=None, next_post=Non
     )
 
     output_path.parent.mkdir(parents=True, exist_ok=True)
-    output_path.write_text(page, encoding='utf-8')
+    output_path.write_text(rewrite_upload_urls(page), encoding='utf-8')
 
 def generate_blog_index(posts, page_num, total_pages, output_dir):
     """Generate blog index page with pagination."""
@@ -591,7 +603,7 @@ def generate_blog_index(posts, page_num, total_pages, output_dir):
         output_path = output_dir / 'blogi' / 'sivu' / str(page_num) / 'index.html'
 
     output_path.parent.mkdir(parents=True, exist_ok=True)
-    output_path.write_text(page, encoding='utf-8')
+    output_path.write_text(rewrite_upload_urls(page), encoding='utf-8')
 
 def generate_travel_diary_page(posts, output_dir):
     """Generate travel diary page with posts in chronological order (oldest first)."""
@@ -657,7 +669,7 @@ def generate_travel_diary_page(posts, output_dir):
 
     output_path = output_dir / 'matkapaivakirja' / 'index.html'
     output_path.parent.mkdir(parents=True, exist_ok=True)
-    output_path.write_text(page, encoding='utf-8')
+    output_path.write_text(rewrite_upload_urls(page), encoding='utf-8')
 
 
 def generate_english_page(posts, output_dir):
@@ -729,7 +741,7 @@ def generate_english_page(posts, output_dir):
 
     output_path = output_dir / 'in-english' / 'index.html'
     output_path.parent.mkdir(parents=True, exist_ok=True)
-    output_path.write_text(page, encoding='utf-8')
+    output_path.write_text(rewrite_upload_urls(page), encoding='utf-8')
 
 
 def generate_home_page(posts, output_dir):
@@ -831,7 +843,7 @@ def generate_home_page(posts, output_dir):
     )
 
     output_path = output_dir / 'index.html'
-    output_path.write_text(page, encoding='utf-8')
+    output_path.write_text(rewrite_upload_urls(page), encoding='utf-8')
 
 def generate_rss_feed(posts, output_dir):
     """Generate RSS feed for the site."""
@@ -1259,23 +1271,27 @@ def main():
         og_locale='fi_FI',
         extra_head=''
     )
-    (OUTPUT_DIR / '404.html').write_text(page_404, encoding='utf-8')
+    (OUTPUT_DIR / '404.html').write_text(rewrite_upload_urls(page_404), encoding='utf-8')
 
-    # Generate Cloudflare _redirects for old image URLs
-    redirects = """# Redirect old WordPress image paths to new location
-/wp-content/uploads/*.jpg /assets/uploads/:splat.webp 301
-/wp-content/uploads/*.jpeg /assets/uploads/:splat.webp 301
-/wp-content/uploads/*.png /assets/uploads/:splat.webp 301
-/wp-content/uploads/*.gif /assets/uploads/:splat.webp 301
-/wordpress/wp-content/uploads/*.jpg /assets/uploads/:splat.webp 301
-/wordpress/wp-content/uploads/*.jpeg /assets/uploads/:splat.webp 301
-/wordpress/wp-content/uploads/*.png /assets/uploads/:splat.webp 301
-/wordpress/wp-content/uploads/*.gif /assets/uploads/:splat.webp 301
+    # Generate Cloudflare _redirects for old image URLs -> R2
+    redirects = f"""# Redirect all image requests to R2 bucket
+/assets/uploads/*.webp {R2_UPLOADS}/:splat.webp 301
+/assets/uploads/*.jpg {R2_UPLOADS}/:splat.webp 301
+/assets/uploads/*.jpeg {R2_UPLOADS}/:splat.webp 301
+/assets/uploads/*.png {R2_UPLOADS}/:splat.webp 301
+/assets/uploads/*.gif {R2_UPLOADS}/:splat.webp 301
 
-# Redirect old image formats to WebP (for /assets/uploads/)
-/assets/uploads/*.jpg /assets/uploads/:splat.webp 301
-/assets/uploads/*.jpeg /assets/uploads/:splat.webp 301
-/assets/uploads/*.png /assets/uploads/:splat.webp 301
+# Redirect old WordPress image paths to R2
+/wp-content/uploads/*.webp {R2_UPLOADS}/:splat.webp 301
+/wp-content/uploads/*.jpg {R2_UPLOADS}/:splat.webp 301
+/wp-content/uploads/*.jpeg {R2_UPLOADS}/:splat.webp 301
+/wp-content/uploads/*.png {R2_UPLOADS}/:splat.webp 301
+/wp-content/uploads/*.gif {R2_UPLOADS}/:splat.webp 301
+/wordpress/wp-content/uploads/*.webp {R2_UPLOADS}/:splat.webp 301
+/wordpress/wp-content/uploads/*.jpg {R2_UPLOADS}/:splat.webp 301
+/wordpress/wp-content/uploads/*.jpeg {R2_UPLOADS}/:splat.webp 301
+/wordpress/wp-content/uploads/*.png {R2_UPLOADS}/:splat.webp 301
+/wordpress/wp-content/uploads/*.gif {R2_UPLOADS}/:splat.webp 301
 
 # Redirect accented URLs to ASCII versions
 /matkapäiväkirja/ /matkapaivakirja/ 301
@@ -1290,25 +1306,25 @@ def main():
 """
     (OUTPUT_DIR / '_redirects').write_text(redirects, encoding='utf-8')
 
-    # Generate Cloudflare Function for image redirects
+    # Generate Cloudflare Function for image redirects to R2
     functions_dir = OUTPUT_DIR / 'functions' / 'assets' / 'uploads'
     functions_dir.mkdir(parents=True, exist_ok=True)
-    function_code = """// Redirect old image formats to WebP
-export async function onRequest(context) {
+    function_code = f"""// Redirect image requests to R2 bucket
+const R2_BASE = '{R2_UPLOADS}';
+
+export async function onRequest(context) {{
   const url = new URL(context.request.url);
   const path = url.pathname;
 
-  // Check if requesting old image format
-  const match = path.match(/^\\/assets\\/uploads\\/(.+)\\.(jpg|jpeg|png)$/i);
+  const match = path.match(/^\\/assets\\/uploads\\/(.+)\\.(jpg|jpeg|png|webp|gif)$/i);
 
-  if (match) {
-    const webpPath = '/assets/uploads/' + match[1] + '.webp';
-    return Response.redirect(new URL(webpPath, url.origin), 301);
-  }
+  if (match) {{
+    const webpPath = R2_BASE + '/' + match[1] + '.webp';
+    return Response.redirect(webpPath, 301);
+  }}
 
-  // Pass through to static assets
   return context.next();
-}
+}}
 """
     (functions_dir / '[[path]].js').write_text(function_code, encoding='utf-8')
 
